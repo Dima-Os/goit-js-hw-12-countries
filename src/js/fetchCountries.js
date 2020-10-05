@@ -1,11 +1,10 @@
 export default {
   countryQuery: '',
+
   fetchCountry() {
-    fetch(`https://restcountries.eu/rest/v2/name/${this.countryQuery}`).then(
-      res => {
-        return res.json().then(data => console.log(data));
-      },
-    );
+    return fetch(`https://restcountries.eu/rest/v2/name/${this.query}`)
+      .then(response => response.json())
+      .then(data => data);
   },
   get query() {
     return this.countryQuery;

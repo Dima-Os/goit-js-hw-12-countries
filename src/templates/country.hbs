@@ -1,0 +1,19 @@
+<h3 class="col s12 country-heading">
+    {{{name}}}
+</h3>
+<div class="info-wrapper col s6">
+
+    <p>
+        <b>Capital:</b> <span>{{capital}}</span>
+    </p>
+    <p>
+        <b>Population:</b> <span>{{population}}</span>
+    </p>
+
+    <ul><b>languages:</b>{{#each this.languages}}
+        <li>
+            {{name}}
+        </li>{{/each}}
+    </ul>
+</div>
+<div class="image-wrapper col s6 "><img class="z-depth-2 " src="{{flag}}" alt="Flag of {{name}}" width=" 500" height="auto"></div>
