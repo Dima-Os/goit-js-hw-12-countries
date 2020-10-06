@@ -10,3 +10,12 @@ export const notify = () => {
     delay: 1000,
   });
 };
+
+export const notifyError = err => {
+  error({
+    title: 'Ahtung!',
+    text: `${err}`,
+    hide: true,
+    delay: 1000,
+  });
+};

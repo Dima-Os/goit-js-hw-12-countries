@@ -15,14 +15,24 @@ p,
 ul {
   font-size: 2rem;
   margin: 0 0 0.25rem 0;
+  list-style: circle;
 }
-ul {
-  list-style: initial !important;
+.countries-list {
+  list-style: circle;
   margin: 0 0.25rem 1rem;
 }
-
-.result {
-  border: 2px solid #333333;
+.countries-list__item {
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 2px;
+  width: max-content;
+  transition: transform 350ms ease-in-out;
+}
+.countries-list__item:hover {
+  box-shadow: 10px 7px 5px 0px rgba(204, 204, 204, 1);
+  transform: scale(1.1);
 }
 
 img {
