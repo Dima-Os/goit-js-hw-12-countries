@@ -9,7 +9,7 @@ export const updateMarkup = data => {
   if (!data) {
     resultRef.insertAdjacentHTML(
       'beforeend',
-      '<h3>Cant find anyting, please try to input correct data!</h3>',
+      "<h3>Can't find anyting, please try to input correct data!</h3>",
     );
     return;
   }
