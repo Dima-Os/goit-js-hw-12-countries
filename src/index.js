@@ -14,7 +14,10 @@ const onInputHandler = event => {
       .then(data => {
         updateMarkup(data);
       })
-      .catch(error => notifyError(error));
+      .catch(error => {
+        notifyError(error);
+        console.clear();
+      });
   }
 };
 
