@@ -10,7 +10,7 @@ const resultRef = document.querySelector('.result-wrapper');
 export const updateMarkup = data => {
   resultRef.innerHTML = '';
   if (data.length > 10) return notify();
-  notifySuccess();
+
   if (data.length > 2 && data.length < 10) {
     resultRef.insertAdjacentHTML('beforeend', countriesList(data));
     listListenerHandler.addListListener();
@@ -18,6 +18,7 @@ export const updateMarkup = data => {
   }
 
   if (data.length === 1) {
+    notifySuccess();
     if (listListenerHandler.listRef) listListenerHandler.removeListListener();
     inputRef.value = '';
     resultRef.insertAdjacentHTML('beforeend', country(...data));
