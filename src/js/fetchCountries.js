@@ -1,5 +1,5 @@
 export default {
-  countresQuery: '',
+  countriesQuery: '',
   fetchCountry() {
     return fetch(`https://restcountries.eu/rest/v2/name/${this.query}`).then(
       response => {
@@ -21,9 +21,9 @@ export default {
     });
   },
   get query() {
-    return this.countresQuery;
+    return this.countriesQuery;
   },
   set query(value) {
-    this.countresQuery = value;
+    this.countriesQuery = value;
   },
 };

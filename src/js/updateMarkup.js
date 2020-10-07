@@ -16,8 +16,9 @@ export const updateMarkup = data => {
     listListenerHandler.addListListener();
     return;
   }
-  listListenerHandler.removeListListener();
+
   if (data.length === 1) {
+    if (listListenerHandler.listRef) listListenerHandler.removeListListener();
     inputRef.value = '';
     resultRef.insertAdjacentHTML('beforeend', country(...data));
   }

@@ -1,5 +1,6 @@
 import fetchCountries from './fetchCountries';
 import { updateMarkup } from './updateMarkup';
+
 export default {
   onClickHandler(event) {
     fetchCountries.query = event.target.textContent;
